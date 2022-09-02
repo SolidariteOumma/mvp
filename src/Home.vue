@@ -38,21 +38,18 @@ const downloadPreview = () => {
 
 const refreshPreview = () => {
   html2canvas(toConvas.value, {
-    scale: 5,
+    scale: 1,
     width: 2481,
     height: 3508,
   }).then(function (canvas) {
     previewHolder.value.innerHTML = '';
     //previewHolder.value.appendChild(canvas);
 
-    canvas.scale = 2;
-    canvas.dpi = 600;
-
     download = () => {
       var imgData = canvas.toDataURL(
         'image/png');
       var doc = new jsPDF({
-        unit: 'px',
+        unit: 'mm',
         format: 'a4'
       });
       doc.addImage(imgData, 'PNG', 0, 0);
