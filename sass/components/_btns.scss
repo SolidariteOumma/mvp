@@ -1,0 +1,16 @@
+button {
+  border: 1px solid $accent;
+  cursor: pointer;
+  background: $accent;
+  color: white;
+  padding: .5em 1em;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all .2s ease;
+
+  &:hover,
+  &:active {
+    background: white;
+    color: $accent;
+  }
+}
